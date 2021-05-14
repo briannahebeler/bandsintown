@@ -10,20 +10,7 @@ body {
     background-size: cover;
 }
 
-#search-area {
-    text-align: center;
-    padding: 10px;
-}
-
-#band-input {
-    margin: 5px;
-}
-
 h3 {
     text-align: center;
     font-style: italic;
-}
-
-.bandSearches {
-    margin: 5px;
 }

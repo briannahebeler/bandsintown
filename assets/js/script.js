@@ -34,46 +34,34 @@ $(document).ready(function () {
             list.append(row);
 
             var col1 = $("<div>");
-            col1.attr("class", "col-sm-4");
+            col1.attr("class", "col-sm-5");
             row.append(col1);
 
-            // var poster = $("<img>");
-            // poster.attr("class", "img-thumbnail img-fluid w-100");
-            // poster.attr("src", response.Poster);
-            // poster.attr("alt", response.Title);
-            // col1.append(poster);
+            var img = $("<img>");
+            img.attr("class", "img-thumbnail img-fluid w-100");
+            img.attr("src", response.thumb_url);
+            img.attr("alt", band);
+            col1.append(img);
 
-            // var col2 = $("<div>");
-            // col2.attr("class", "col-sm-8");
-            // row.append(col2);
+            var col2 = $("<div>");
+            col2.attr("class", "col-sm-7");
+            row.append(col2);
 
-            // var head = $("<h3>").text(response.Title);
-            // col2.append(head);
+            var head = $("<h3>").text(band);
+            col2.append(head);
 
-            // // Creates an element to hold the plot
-            // var plot = $("<p>").text(response.Plot);
-            // // Displays the plot
-            // col2.append(plot);
+            var fans = $("<p>");
+            fans.text("The number of fans tracking this artist: " + response.tracker_count);
+            col2.append(fans);
 
-            // // Creates an element to hold the release year
-            // var year = $("<p>").text("Released: " + response.Released);
-            // // Displays the release year
-            // col2.append(year);
+            var events = $("<p>");
+            events.text("The number of upcoming events for this artist: " + response.upcoming_event_count);
+            col2.append(events);
 
-            // // Creates an element to hold the plot
-            // var director = $("<p>").text("Director: " + response.Director);
-            // // Displays the plot
-            // col2.append(director);
-
-            // // Creates an element to hold the plot
-            // var actors = $("<p>").text("Actors: " + response.Actors);
-            // // Displays the plot
-            // col2.append(actors);
-
-            //  // Creates an element to have the rating displayed
-            // var rating = $("<p>").text("Rating: " + response.Rated);
-            //  // Displays the rating
-            // col2.append(rating);
+            var url = $("<a>");
+            url.text("bandsintown link");
+            url.attr("href", response.url);
+            col2.append(url);
 
         })
     }
