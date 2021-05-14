@@ -26,7 +26,7 @@ $(document).ready(function () {
 
             //test
             var list = $("<list>");
-            list.attr("class", "list-group-item");
+            list.attr("class", "list-group-item bg-dark text-light mx-auto");
             $("#bands-view").append(list);
 
             var row = $("<div>");
@@ -77,7 +77,7 @@ $(document).ready(function () {
 
             // displays new search on the displayed search history card
             var bandName = $("<h6>").addClass("card-body").text(band);
-            var card = $("<div>").addClass("card");
+            var card = $("<div>").addClass("card bg-dark text-light mx-auto m-1");
             card.append(bandName);
             $("#search-history").append(card);
 
